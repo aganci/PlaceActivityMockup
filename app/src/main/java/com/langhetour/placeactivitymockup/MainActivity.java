@@ -3,9 +3,11 @@ package com.langhetour.placeactivitymockup;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,6 +25,19 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Osteria Langhet");
 
+/*
+        DisplayMetrics metrics = getResources().getDisplayMetrics();
+        TextView placeTitle = (TextView) findViewById(R.id.place_title);
+        placeTitle.setText(
+                "xdpi=" + String.valueOf(metrics.xdpi) + "\n" +
+                "ydpi=" + String.valueOf(metrics.ydpi) + "\n" +
+                "density=" + String.valueOf(metrics.density) + "\n" +
+                "widthPixels=" + String.valueOf(metrics.widthPixels) + "\n" +
+                "heightPixels=" + String.valueOf(metrics.heightPixels) + "\n" +
+                "densityDpi=" + String.valueOf(metrics.densityDpi) + "\n" +
+                "scaledDensity=" + String.valueOf(metrics.scaledDensity) + "\n"
+        );
+*/
 
     }
 
