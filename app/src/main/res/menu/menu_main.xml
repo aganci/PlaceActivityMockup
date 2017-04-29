@@ -4,34 +4,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
    <item
-        android:id="@+id/discard"
-        android:icon="@drawable/ic_discard"
-        android:orderInCategory="100"
-        android:title="@string/delete"
+        android:id="@+id/book"
+        android:title="@string/book"
         app:showAsAction="never"/>
 
     <item
-        android:id="@+id/search"
-        android:icon="@drawable/ic_search"
-        android:orderInCategory="100"
-        android:title="@string/search"
+        android:id="@+id/send_mail"
+        android:title="@string/send_email"
         app:showAsAction="never"/>
 
     <item
-        android:id="@+id/settings"
-        android:orderInCategory="100"
-        android:title="@string/settings"
+        android:id="@+id/get_directions"
+        android:title="@string/get_directions"
         app:showAsAction="never"/>
 
     <item
-        android:id="@+id/edit"
-        android:orderInCategory="100"
-        android:title="@string/edit"
-        app:showAsAction="never"/>
-
-    <item
-        android:id="@+id/Exit"
-        android:orderInCategory="100"
+        android:id="@+id/exit"
         android:title="@string/exit"
         app:showAsAction="never"/>
 

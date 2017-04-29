@@ -70,32 +70,25 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        String msg = "";
-
         switch (item.getItemId()) {
 
-            case R.id.discard:
-                msg = getString(R.string.delete);
+            case R.id.book:
+                onClickBook(null);
                 break;
 
-            case R.id.search:
-                msg = getString(R.string.search);
+            case R.id.send_mail:
+                onClickSendEmail(null);
                 break;
 
-            case R.id.edit:
-                msg = getString(R.string.edit);
+            case R.id.get_directions:
+                onClickGetDirections(null);
                 break;
 
-            case R.id.settings:
-                msg = getString(R.string.settings);
-                break;
-
-            case R.id.Exit:
-                msg = getString(R.string.exit);
+            case R.id.exit:
+                finish();
+                System.exit(0);
                 break;
         }
-
-        Toast.makeText(this, msg + " clicked !", Toast.LENGTH_SHORT).show();
 
         return super.onOptionsItemSelected(item);
     }
@@ -122,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickGetDirections(View view) {
+        // https://developers.google.com/maps/documentation/android-api/intents
         Uri gmmIntentUri = Uri.parse("google.navigation:q=Langhet,+Bergolo");
         Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
         mapIntent.setPackage("com.google.android.apps.maps");

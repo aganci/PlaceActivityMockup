@@ -1,8 +1,7 @@
 <resources>
-    <string name="app_name">Apply Theme</string>
-    <string name="delete">Delete</string>
-    <string name="search">Search</string>
-    <string name="settings">Settings</string>
-    <string name="edit">Edit</string>
-    <string name="exit">Exit</string>
+    <string name="app_name">Osteria Langhet</string>
+    <string name="book">Prenota</string>
+    <string name="send_email">Email</string>
+    <string name="get_directions">Portami qui</string>
+    <string name="exit">Esci</string>
 </resources>
