@@ -107,4 +107,24 @@ public class MainActivity extends AppCompatActivity {
         //intent.setPackage("com.whatsapp");
         startActivity(intent);
     }
+
+    public void onClickSendEmail(View view) {
+        String[] addresses = new String[] {"info@langhet.com"};
+
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+        intent.putExtra(Intent.EXTRA_EMAIL, addresses);
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Prenotazione");
+        intent.putExtra(Intent.EXTRA_TEXT, "Buongiorno,\nVorrei prenotare un tavolo per il giorno");
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+    }
+
+    public void onClickGetDirections(View view) {
+        Uri gmmIntentUri = Uri.parse("google.navigation:q=Langhet,+Bergolo");
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+        mapIntent.setPackage("com.google.android.apps.maps");
+        startActivity(mapIntent);
+    }
 }

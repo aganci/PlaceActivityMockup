@@ -81,7 +81,8 @@
                         android:text="Prenota"
                         android:textAllCaps="true"
                         android:textColor="@color/colorAccent"
-                        android:textSize="14sp" />
+                        android:textSize="14sp"
+                        android:onClick="onClickBook" />
                 </LinearLayout>
             </LinearLayout>
             <View
@@ -127,7 +128,8 @@
                         android:text="Email"
                         android:textAllCaps="true"
                         android:textColor="@color/colorAccent"
-                        android:textSize="14sp" />
+                        android:textSize="14sp"
+                        android:onClick="onClickSendEmail"/>
                 </LinearLayout>
             </LinearLayout>
             <View
@@ -172,7 +174,8 @@
                         android:text="Portami qui"
                         android:textAllCaps="true"
                         android:textColor="@color/colorAccent"
-                        android:textSize="14sp" />
+                        android:textSize="14sp"
+                        android:onClick="onClickGetDirections"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
