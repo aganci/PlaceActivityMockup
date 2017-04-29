@@ -1,5 +1,7 @@
 package com.langhetour.placeactivitymockup;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -7,8 +9,12 @@ import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,8 +44,22 @@ public class MainActivity extends AppCompatActivity {
                 "scaledDensity=" + String.valueOf(metrics.scaledDensity) + "\n"
         );
 */
+    /* La Cucina delle Langhe (sapientemente) rivisitata */
+
+    /* Orario di oggi */
+    /* solo su prenotazione */
+
+    /* Indirizzo */
+    /* Località Valdea, 1 - 12074 Bergolo (CN) */
+
+    /* Contatti */
+    /*
+       3336399022 - info@langhet.com
+       http://www.langhet.com/menu-della-settimana.html
+    */
 
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -78,5 +98,13 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, msg + " clicked !", Toast.LENGTH_SHORT).show();
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onClickBook(View view) {
+        Uri uri = Uri.parse("smsto:" + "+393336399022");
+        Intent intent = new Intent(Intent.ACTION_SENDTO, uri);
+        intent.putExtra("sms_body", "Vorrei prenotare per il giorno");
+        //intent.setPackage("com.whatsapp");
+        startActivity(intent);
     }
 }
